@@ -54,13 +54,18 @@ let generateID = () => {
   taskDB = retrieveDB()
   let id =  Math.floor(Math.random() * 1000) + 1
 
-  let checkDuplicateId = taskDB.filter(task => task.id === id)
+  if (taskDB !== null) {
+    let checkDuplicateId = taskDB.filter(task => task.id === id)
 
-  if (checkDuplicateId.length > 0) {
-    generateID()
+    if (checkDuplicateId.length > 0) {
+      generateID()
+    } else {
+      return id
+    }
   } else {
     return id
   }
+
 }
 
 //Create task
@@ -79,6 +84,9 @@ taskForm.addEventListener("submit", (e) => {
     }
 
     taskDB = retrieveDB()
+    if (taskDB === null) {
+       taskDB = []
+    }
     taskDB.push(newTask)
     
     e.target.task.value = ""
