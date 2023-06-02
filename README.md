@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github Repository](https://github.com/Austinet/task-tracker-JS.git)
-- Live Site URL: [Hosted Site](https://Austinet.github.io/git/task-tracker-JS)
+- Live Site URL: [Hosted Site](https://Austinet.github.io/task-tracker-JS)
 
 ## My process
 

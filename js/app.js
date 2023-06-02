@@ -2,6 +2,7 @@ let taskForm = document.querySelector("#task-form")
 let taskContainer = document.querySelector(".task-container")
 let toggleBtn = document.querySelector("#toggleBtn")
 
+//Toggle button at the header
 toggleBtn.textContent = "Close"
 toggleBtn.addEventListener("click", () => {
     if (toggleBtn.textContent === "Close") {
@@ -13,27 +14,7 @@ toggleBtn.addEventListener("click", () => {
     }
 })
 
-
-// let taskDB = [
-//     {
-//         id: 1,
-//         task: "Doctor's Appointment",
-//         dayTime: "Feb 6th at 7:00am",
-//         reminder: false
-//     },
-//     {
-//         id: 2,
-//         task: "Doctor's",
-//         dayTime: "Feb 6th at 7:00am",
-//         reminder: true
-//     },
-//     {
-//         id: 3,
-//         task: "Appointment",
-//         dayTime: "Feb 6th at 7:00am",
-//         reminder: true
-//     }
-// ]
+//Database
 let taskDB = []
 
 let saveTask = (taskDB) => {
@@ -44,6 +25,8 @@ let saveTask = (taskDB) => {
 let retrieveDB = () => {
     return JSON.parse(localStorage.getItem("taskDB"))
 }
+
+//Display tasks
 let render = (taskDB) => {
     taskDB = retrieveDB()
     if(taskDB !== null) {
@@ -66,6 +49,7 @@ let render = (taskDB) => {
 
 render(taskDB)
 
+//Generate unique IDs
 let generateID = () => {
   taskDB = retrieveDB()
   let id =  Math.floor(Math.random() * 1000) + 1
@@ -79,6 +63,7 @@ let generateID = () => {
   }
 }
 
+//Create task
 taskForm.addEventListener("submit", (e) => {
     e.preventDefault();
    let task = e.target.task.value
@@ -103,14 +88,14 @@ taskForm.addEventListener("submit", (e) => {
     saveTask(taskDB)
 })
 
-
-
+//Delete task
 let deleteTask = (id) => {
     taskDB = retrieveDB()
     taskDB = taskDB.filter(task => task.id !== id)
     saveTask(taskDB)
 }
 
+//Toggle reminder
 let setReminder = (id) => {
     taskDB = retrieveDB()
     taskDB.forEach(task => {
