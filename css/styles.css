@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", serif;
+}
+
+#task-tracker {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    border: 2px solid #000;
+    margin: 1rem auto;
+    width: 450px;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.3rem;
+}
+
+h1 {
+    font-weight: 400;
+}
+
+button {
+    font-size: 1.1rem;
+    padding: 0.7rem 1.3rem;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+}
+
+.header button {
+    background-color: rgb(21, 55, 83);
+}
+
+form button {
+    background-color: #000;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.form-control {
+    margin-bottom: 1.5rem;
+}
+
+.form-control-checkbox {
+    display: flex;
+}
+
+label {
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"] {
+    width: 100%;
+    height: 40px;
+    padding: 1rem;
+    font-size: 1.1rem;
+    outline: none;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin: 0 0 0.4rem 2rem;
+}
+
+.task-container {
+    margin-top: 1.5rem;
+}
+
+.task-item {
+    background: #eee;
+    padding: 1rem 1.5rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.task-item button {
+    color: red;
+    font-weight: bold;
+    font-size: 1.4rem;
+    padding: 0;
+}
+
+.task-item h3 {
+    font-weight: normal;
+    margin-bottom: 0.4rem;
+}
+
+.task-item p {
+    font-size: 1.05rem;
+}
+
+.green-border {
+    border-left: 4px solid green;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+footer a {
+    color: rgb(21, 55, 83);
+    text-decoration: none;
+}
+
+@media(max-width: 500px) {
+    .container {
+        width: 95%;
+        padding: 1.5rem;
+    }
+}

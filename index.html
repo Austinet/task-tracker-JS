@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Task tracker built with JavaScript by Austinet">
+    <title>Task Tracker</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <main>
+        <section id="task-tracker">
+           <div class="container">
+               <div class="header">
+                   <h1>Task Tracker</h1>
+                   <button id="toggleBtn"></button>
+               </div>
+               <form action="" id="task-form">
+                   <div class="form-control">
+                      <label for="task">Task</label>
+                      <input type="text" name="task" id="name" placeholder="Add Task" required>
+                   </div>
+                   <div class="form-control">
+                      <label for="day-time">Day & Time</label>
+                      <input type="text" name="dayTime" id="dayTime" placeholder="Add Day & Time" required>
+                  </div>
+                  <div class="form-control-checkbox">
+                      <label for="reminder">Set Reminder</label>
+                      <input type="checkbox" name="reminder" id="reminder">
+                  </div>
+                  <button type="submit">Save Task</button>
+               </form>
+               <div class="task-container">
+                 
+               </div>
+               <footer>
+                  <p>Copyright &copy; 2023 <a href="https://Austinet.github.io/portfolio/">Austinet</a></p>
+               </footer>
+           </div>
+        </section>
+    </main>
+    <script src="js/app.js"></script>
+</body>
+</html>
